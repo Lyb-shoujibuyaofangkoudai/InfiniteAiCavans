@@ -140,6 +140,19 @@ cd infinite-canvas
 docker compose up -d
 ```
 
+### 生成静态包 + 启动器
+
+```bash
+git clone git@github.com:basketikun/infinite-canvas.git
+cd infinite-canvas
+node scripts/package-static-app.mjs
+```
+
+生成后在 `release/static-app/` 下获得可分发目录，其中包含前端静态文件、启动说明和本地启动器。
+
+- Windows 可直接双击 `release/static-app/infinite-canvas-launcher.exe` 或运行 `start.cmd`
+- macOS / Linux 可运行 `release/static-app/start.sh`
+
 运行后默认端口3000，可访问 `http://localhost:3000`。
 
 首次打开后进入右上角配置，填入自己的 OpenAI 兼容 `Base URL` 和 `API Key`。

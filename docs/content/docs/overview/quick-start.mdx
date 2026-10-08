@@ -29,6 +29,14 @@ docker build -t infinite-canvas .
 docker run --rm -p 3000:3000 infinite-canvas
 ```
 
+## Build a static package with launcher
+
+```bash
+node scripts/package-static-app.mjs
+```
+
+The package is generated in `release/static-app/`. It includes the built frontend, a local launcher executable, and platform start scripts so the folder can be distributed and run directly.
+
 ## First-time setup
 
 - Open Settings and enter your `Base URL`, `API Key`, and model names.
